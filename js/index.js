@@ -34,6 +34,8 @@ function setRandomColor() {
     // console.log(randomColor);
     refs.body.style.backgroundColor = randomColor;
   }, COLOR_DELAY);
+  refs.startBtn.setAttribute('disabled', true);
+  refs.stopBtn.removeAttribute('disabled');
 }
 
 function stopSetRandomColor() {
@@ -42,6 +44,8 @@ function stopSetRandomColor() {
   }
   clearInterval(intervalId);
   intervalId = null;
+  refs.startBtn.removeAttribute('disabled');
+  refs.stopBtn.setAttribute('disabled', true);
   // console.log('Stop changing background color, please!');
 }
 
