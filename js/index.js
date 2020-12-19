@@ -13,7 +13,8 @@ const colors = [
   '#795548',
 ];
 
-const NOTIFICATION_DELAY = 1000;
+const COLOR_DELAY = 1000;
+
 let intervalId = null;
 
 const randomIntegerFromInterval = (min, max) => {
@@ -32,7 +33,7 @@ function setRandomColor() {
     const randomColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
     // console.log(randomColor);
     refs.body.style.backgroundColor = randomColor;
-  }, NOTIFICATION_DELAY);
+  }, COLOR_DELAY);
 }
 
 function stopSetRandomColor() {
